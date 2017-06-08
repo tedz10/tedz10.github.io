@@ -1,0 +1,315 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHdhc2NvIiwiYSI6ImNpdTRtdW9sZjBoaDkydHBnY3FiaGI2bDEifQ.9Gf5y4pu-NhN6s_L0vdd9Q'
+    map = new mapboxgl.Map({
+      container: document.getElementById("map"),
+      logoPosition: 'bottom-right',
+      style: 'mapbox://styles/dwasco/cj0n4fxjp003q2rnyu3r18dd1',
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+
+    onMapLoad = () => {
+        isMapLoaded = true
+        map.addSource('points', {
+          type: 'geojson',
+          cluster: false,
+          clusterMaxZoom: 16, // Max zoom to cluster points on
+          clusterRadius: 2.5, // Radius of each cluster when clustering points (defaults to 50)
+          data: {
+            type: 'FeatureCollection',
+            features: [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40391865372700408443,  37.78530084682270739904]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Tropisueño<br><br><b> Neighborhood: </b> FinancialDistrict <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41316682497600254464,  37.78591583649689766844]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Bourbon & Branch<br><br><b> Neighborhood: </b> Tenderloin <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42360970000000008895,  37.76505689999999759721]
+    },
+    properties: {
+      description: '<b>Bar name:</b> ABV<br><br><b> Neighborhood: </b> Mission <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.43911649999999724514,  37.80036629999999320262]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Delarosa<br><br><b> Neighborhood: </b> Marina/CowHollow <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40634590000000514465,  37.79819140000000032842]
+    },
+    properties: {
+      description: '<b>Bar name:</b> 15 Romolo<br><br><b> Neighborhood: </b> NorthBeach/TelegraphHill <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40419720000001291282,  37.78807579999999433085]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Hawthorn<br><br><b> Neighborhood: </b> UnionSquare <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40880784249300461397,  37.77581290625870025224]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Bloodhound<br><br><b> Neighborhood: </b> SoMa <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.38813240000000348573,  37.76062070000000403525]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Third Rail<br><br><b> Neighborhood: </b> Dogpatch <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41824299999998970634,  37.73942000000000263071]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Holy Water<br><br><b> Neighborhood: </b> BernalHeights <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41845551349199183733,  37.77623086034360255780]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Mr Tipple\'s Recording Studio<br><br><b> Neighborhood: </b> CivicCenter <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.43859999999999388365,  37.77704800000000062710]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Bar 821<br><br><b> Neighborhood: </b> NoPa <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.46446999999999150077,  37.76389999999999957936]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Fireside Bar<br><br><b> Neighborhood: </b> InnerSunset <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.39718000000000586169,  37.76241999999999876536]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Mochica<br><br><b> Neighborhood: </b> PotreroHill <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.44799673557299968252,  37.76982463896270303394]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Gold Cane Cocktail Lounge<br><br><b> Neighborhood: </b> TheHaight <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41611999999999227384,  37.79095000000000226237]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Zeki\'s Bar<br><br><b> Neighborhood: </b> NobHill <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40608159999999315914,  37.79766400000000459158]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Devil\'s Acre<br><br><b> Neighborhood: </b> Chinatown <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42262706160499874386,  37.77792155742650237471]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Muka<br><br><b> Neighborhood: </b> HayesValley <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42543029785200303650,  37.78724670410159802714]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Butterfly Lounge<br><br><b> Neighborhood: </b> Japantown <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.43129309999999065894,  37.76535590000000297550]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Nomica<br><br><b> Neighborhood: </b> Castro <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42046356201200296709,  37.78744506835939631628]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Rusted Mule<br><br><b> Neighborhood: </b> LowerNobHill <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42713999999999430202,  37.75182999999999822194]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Hamlet<br><br><b> Neighborhood: </b> NoeValley <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  }],
+          },
+        })
+
+        map.addLayer({
+          id: 'points',
+          type: 'circle',
+          paint: {
+            'circle-blur': 0.1,
+            'circle-radius': {
+              base: 2,
+              stops: [[11, 5], [14, 8], [22, 180]],
+            },
+            'circle-color': {
+              property: 'cost',
+              default: '#FF7616',
+              stops: [
+                [0.0, 'blue'], 
+                [400, 'green'], 
+                [800, 'yellow'], 
+                [1500, 'orange'], 
+                [13000, 'red'], 
+//                [0.0, '#FFAD27'], // least dense
+//                [500, '#F26401'], // light orange
+//                [1200, '#C33501'], // (our base orange)
+//                [13000, '#900149'], // (most density)
+              ],
+            },
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0,
+            'circle-stroke-color': 'black',
+            'circle-stroke-opacity': 0.5,
+          },
+          source: 'points',
+        })
+
+	map.setCenter([-122.4194, 37.7749])
+        map.zoomTo(11)
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'points', function (e, i) {
+
+            new mapboxgl.Popup()
+                .setLngLat(e.features[0].geometry.coordinates)
+                .setHTML(e.features[0].properties.description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'points', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'points', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    }
+    map.on('load', onMapLoad)
+
+</script>

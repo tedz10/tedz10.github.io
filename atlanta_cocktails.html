@@ -1,0 +1,260 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHdhc2NvIiwiYSI6ImNpdTRtdW9sZjBoaDkydHBnY3FiaGI2bDEifQ.9Gf5y4pu-NhN6s_L0vdd9Q'
+    map = new mapboxgl.Map({
+      container: document.getElementById("map"),
+      logoPosition: 'bottom-right',
+      style: 'mapbox://styles/dwasco/cj0n4fxjp003q2rnyu3r18dd1',
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+
+    onMapLoad = () => {
+        isMapLoaded = true
+        map.addSource('points', {
+          type: 'geojson',
+          cluster: false,
+          clusterMaxZoom: 16, // Max zoom to cluster points on
+          clusterRadius: 2.5, // Radius of each cluster when clustering points (defaults to 50)
+          data: {
+            type: 'FeatureCollection',
+            features: [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.39018333862300380588,  33.81599572359490224471]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Holeman & Finch<br><br><b> Neighborhood: </b> Buckhead <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.29228210449220171085,  33.77164077758789773043]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Kimball House<br><br><b> Neighborhood: </b> Decatur <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.51997681018430341737,  34.08728069851500208642]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Habanero\'s Taqueria<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.38604000000000837645,  33.77890000000000014779]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Ecco<br><br><b> Neighborhood: </b> Midtown <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.35271910677450080129,  33.77226682648660016639]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Sweet Auburn BBQ<br><br><b> Neighborhood: </b> Poncey-Highland <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.36396879140170312894,  33.75653068252490385248]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Ticonderoga Club<br><br><b> Neighborhood: </b> InmanPark <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.23733000000000004093,  34.09353000000000122327]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Secreto Kitchen & Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.38690632129899427127,  33.75958849278219986445]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Red Phone Booth<br><br><b> Neighborhood: </b> Downtown <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.36606989999999939300,  33.77222000000000434738]
+    },
+    properties: {
+      description: '<b>Bar name:</b> King of Pops Bar & Good Grub<br><br><b> Neighborhood: </b> OldFourthWard <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.42228199999999560532,  33.98818299999999936745]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Drift Fish House & Oyster Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.36244449999999517331,  34.07318109999999933279]
+    },
+    properties: {
+      description: '<b>Bar name:</b> C&S Chowder House<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.22105000000000529781,  33.76389999999999957936]
+    },
+    properties: {
+      description: '<b>Bar name:</b> CalaBar & Grill<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.55450000000000443379,  33.30102000000000117552]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Tomato House Restaurant<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.61331989991299451503,  34.01954703755200171145]
+    },
+    properties: {
+      description: '<b>Bar name:</b> SuBourbon Bar & Social Club<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.67492466758220359679,  33.86384197233449810938]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Monterreys Mexican Restaurant<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.61380109190940856934,  33.82863611136580317407]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Blue Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  }],
+          },
+        })
+
+        map.addLayer({
+          id: 'points',
+          type: 'circle',
+          paint: {
+            'circle-blur': 0.1,
+            'circle-radius': {
+              base: 2,
+              stops: [[11, 5], [14, 8], [22, 180]],
+            },
+            'circle-color': {
+              property: 'cost',
+              default: '#FF7616',
+              stops: [
+                [0.0, 'blue'], 
+                [400, 'green'], 
+                [800, 'yellow'], 
+                [1500, 'orange'], 
+                [13000, 'red'], 
+//                [0.0, '#FFAD27'], // least dense
+//                [500, '#F26401'], // light orange
+//                [1200, '#C33501'], // (our base orange)
+//                [13000, '#900149'], // (most density)
+              ],
+            },
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0,
+            'circle-stroke-color': 'black',
+            'circle-stroke-opacity': 0.5,
+          },
+          source: 'points',
+        })
+
+	map.setCenter([-84.47492466758220359679,  33.76384197233449810938])
+        map.zoomTo(8.5)
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'points', function (e, i) {
+
+            new mapboxgl.Popup()
+                .setLngLat(e.features[0].geometry.coordinates)
+                .setHTML(e.features[0].properties.description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'points', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'points', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    }
+    map.on('load', onMapLoad)
+
+</script>

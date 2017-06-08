@@ -1,0 +1,645 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHdhc2NvIiwiYSI6ImNpdTRtdW9sZjBoaDkydHBnY3FiaGI2bDEifQ.9Gf5y4pu-NhN6s_L0vdd9Q'
+    map = new mapboxgl.Map({
+      container: document.getElementById("map"),
+      logoPosition: 'bottom-right',
+      style: 'mapbox://styles/dwasco/cj0n4fxjp003q2rnyu3r18dd1',
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+
+    onMapLoad = () => {
+        isMapLoaded = true
+        map.addSource('points', {
+          type: 'geojson',
+          cluster: false,
+          clusterMaxZoom: 16, // Max zoom to cluster points on
+          clusterRadius: 2.5, // Radius of each cluster when clustering points (defaults to 50)
+          data: {
+            type: 'FeatureCollection',
+            features: [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.76300790807340490574,  30.25602343986259867847]
+    },
+    properties: {
+      description: '<b>Bar name:</b> VOX Table<br><br><b> Neighborhood: </b> 78704(SouthAustin) <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.74104300000000478121,  30.26817299999999733018]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Firehouse Lounge<br><br><b> Neighborhood: </b> Downtown <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.72268475316141689291,  30.26196737626919741615]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Whisler\'s<br><br><b> Neighborhood: </b> EastAustin <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.13188999999999850843,  31.55624999999999857891]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Dichotomy Coffee & Spirits<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-94.79869119822978973389,  29.30410502972999964300]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Daiquiri Time Out<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.28768199999998955718,  32.33184599999999875308]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Roast Social Kitchen<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.74022499999999524789,  30.33091399999999993042]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Taco Flats<br><br><b> Neighborhood: </b> Allandale <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.48499044679790870305,  30.07143738682780309546]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Howie\'s Tiki<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-96.34895999999999105512,  30.61677000000000248292]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The West End Elixir Company<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.62070470000000455002,  29.59662439999999961060]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Ginger Mule Tonics & Meals<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.74809999999999376996,  30.39914999999999878355]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Baretto<br><br><b> Neighborhood: </b> GreatHills <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-101.91045829456199101060,  33.57039254561950514244]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Cocina De La Sirena<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.53331000000000017280,  30.94499000000000066279]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Alexander\'s Distillery<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.12602282469791248332,  29.52695159541460157016]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Preamble Lounge & Craft House<br><br><b> Neighborhood: </b> ClearLake <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.05136438649330443695,  28.02336577151319829682]
+    },
+    properties: {
+      description: '<b>Bar name:</b> 495 Chesapeake Eats<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-98.22334820000000377149,  26.24842119999999923152]
+    },
+    properties: {
+      description: '<b>Bar name:</b> El Divino Dining & Cocktails<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.12665844224829925224,  29.65170113045780198036]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Republic House<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.76331000000000415184,  30.25382000000000104478]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Backbeat<br><br><b> Neighborhood: </b> SouthLamarDistrict <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-98.86830090000000836881,  30.27192399999999850024]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Der Daiwel<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-102.11203000000000429281,  32.03965000000000173941]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Blue Door<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-102.29827359999998748208,  31.91100470000000299819]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Proof<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.06045568734408846012,  29.56690378794909790372]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Volcano Room<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.36433649999999317970,  29.55867119999999914626]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Noble Experiment<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.64949460327619590316,  29.96228162673200046129]
+    },
+    properties: {
+      description: '<b>Bar name:</b> 21st Amendment<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.67140000000000554792,  30.51897999999999910870]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Burros Tex Mex Bar and Grill<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.70535109999998724106,  30.21257369999999653487]
+    },
+    properties: {
+      description: '<b>Bar name:</b> G Bar and Bistro<br><br><b> Neighborhood: </b> SoutheastAustin <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.67229000000000382897,  29.88524000000000313548]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Pearl<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.95883941650390625000,  29.86282539367680044506]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Elevate bar + table<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.26439182325398746798,  29.99796153802589770976]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Green Oaks Tavern<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.76348670000001561675,  29.73472489999999979204]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Local Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.60901181957399330713,  30.44332320626299903665]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Bahadi\'s Chicken & Lounge<br><br><b> Neighborhood: </b> Pflugerville <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-99.45099899999999593092,  27.55946699999999793818]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Thirty Thirty Restaurant & Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.06166999999999234205,  27.83459000000000216346]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Treasure Island  Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.92501850312271471921,  30.49435925514989875751]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Rumi\'s Tavern<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.45747500000000229647,  30.16010900000000205523]
+    },
+    properties: {
+      description: '<b>Bar name:</b> SideBar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.82578999999999780357,  30.00252000000000052182]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Longhorn Daiquiris<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-96.46341920000000413893,  32.09328099999999750480]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Black Jack McCanless<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-96.91664099999999848478,  30.17714699999999794500]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Bernie\'s Bar and Grill<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.33223800000000380805,  27.69362299999999876832]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Flock<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-100.38664419204000921582,  35.91274691653730144481]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Rocky\'s Lounge<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-98.20193096995349435474,  26.26507695685450016754]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Sip Lounge<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.09875092655420303345,  29.78583815832960013381]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Wild Hawgs Saloon<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-96.29694369999999992160,  29.98521039999999970860]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Summer\'s Backyard Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.47695239251498833255,  30.36757354840769806970]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Cocktail Express<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-96.38961030000000107520,  30.15098950000000144200]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Little Mikes Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-97.00693511962890625000,  28.79819869995120029671]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Moonshine Drinkery<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.58317226419359258216,  30.35404134816939958341]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Frosty\'s Frozen Drinks<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-98.29032149165870180241,  26.19520128445010342944]
+    },
+    properties: {
+      description: '<b>Bar name:</b> BfB the Best flavored Beer<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-94.95981730354090188939,  29.35628785495429937669]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Vfw 8248<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-95.35563949495559654679,  28.96052666200910152838]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Pinky\'s Daiquiris<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-94.58158783614641151871,  32.73655862900979940378]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Rendezvous Bikini Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 5.000000<br><br>'
+    }
+  }],
+          },
+        })
+
+        map.addLayer({
+          id: 'points',
+          type: 'circle',
+          paint: {
+            'circle-blur': 0.1,
+            'circle-radius': {
+              base: 2,
+              stops: [[11, 5], [14, 8], [22, 180]],
+            },
+            'circle-color': {
+              property: 'cost',
+              default: '#FF7616',
+              stops: [
+                [0.0, 'blue'], 
+                [400, 'green'], 
+                [800, 'yellow'], 
+                [1500, 'orange'], 
+                [13000, 'red'], 
+//                [0.0, '#FFAD27'], // least dense
+//                [500, '#F26401'], // light orange
+//                [1200, '#C33501'], // (our base orange)
+//                [13000, '#900149'], // (most density)
+              ],
+            },
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0,
+            'circle-stroke-color': 'black',
+            'circle-stroke-opacity': 0.5,
+          },
+          source: 'points',
+        })
+
+	map.setCenter([-97.72268475316141689291,  30.26196737626919741615])
+        map.zoomTo(5)
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'points', function (e, i) {
+
+            new mapboxgl.Popup()
+                .setLngLat(e.features[0].geometry.coordinates)
+                .setHTML(e.features[0].properties.description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'points', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'points', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    }
+    map.on('load', onMapLoad)
+
+</script>

@@ -1,0 +1,260 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHdhc2NvIiwiYSI6ImNpdTRtdW9sZjBoaDkydHBnY3FiaGI2bDEifQ.9Gf5y4pu-NhN6s_L0vdd9Q'
+    map = new mapboxgl.Map({
+      container: document.getElementById("map"),
+      logoPosition: 'bottom-right',
+      style: 'mapbox://styles/dwasco/cj0n4fxjp003q2rnyu3r18dd1',
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+
+    onMapLoad = () => {
+        isMapLoaded = true
+        map.addSource('points', {
+          type: 'geojson',
+          cluster: false,
+          clusterMaxZoom: 16, // Max zoom to cluster points on
+          clusterRadius: 2.5, // Radius of each cluster when clustering points (defaults to 50)
+          data: {
+            type: 'FeatureCollection',
+            features: [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-76.99785958035660371479,  38.88513579808070375066]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Barrel<br><br><b> Neighborhood: </b> CapitolHill <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.03211999999999193278,  38.90774000000000398813]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Pig<br><br><b> Neighborhood: </b> LoganCircle <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-76.99102783203120736744,  38.90045547485350141415]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Copycat Co<br><br><b> Neighborhood: </b> HStreetCorridor/AtlasDistrict/NearNortheast <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.02344999999999686224,  38.89632999999999896090]
+    },
+    properties: {
+      description: '<b>Bar name:</b> minibar by José Andrés<br><br><b> Neighborhood: </b> PennQuarter <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.03158569335940342171,  38.91736984252929687500]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Gibson<br><br><b> Neighborhood: </b> UStreetCorridor <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.04312971230309869952,  38.92358819350229737211]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Tail Up Goat<br><br><b> Neighborhood: </b> AdamsMorgan <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.02365100000000097680,  38.90979799999999499960]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Chaplin\'s<br><br><b> Neighborhood: </b> Shaw <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.05866000000000326509,  38.90536999999999778765]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Unum<br><br><b> Neighborhood: </b> Georgetown <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.02222287654879551155,  38.89932328041049913736]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Jackpot<br><br><b> Neighborhood: </b> Chinatown <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-76.98528081178669424389,  38.91540406878129232382]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Republic Restoratives Distillery<br><br><b> Neighborhood: </b> IvyCity <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-76.99076099999999200918,  38.93323900000000037380]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Steel Plate<br><br><b> Neighborhood: </b> Brookland <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.00158000000000413365,  38.87345999999999435204]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Whaley\'s<br><br><b> Neighborhood: </b> NavyYard <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.04211590000001308454,  38.90832100000000082218]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Sheppard<br><br><b> Neighborhood: </b> DupontCircle <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.05370999999999526153,  38.90339999999999776037]
+    },
+    properties: {
+      description: '<b>Bar name:</b> La Piazza<br><br><b> Neighborhood: </b> FoggyBottom <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.02375699999998914791,  38.93051899999999676538]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Union Drinkery<br><br><b> Neighborhood: </b> ParkView <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.02555084228519888256,  38.92573547363279828915]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Hilltop Bar & Restaurant<br><br><b> Neighborhood: </b> ColumbiaHeights <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  }],
+          },
+        })
+
+        map.addLayer({
+          id: 'points',
+          type: 'circle',
+          paint: {
+            'circle-blur': 0.1,
+            'circle-radius': {
+              base: 2,
+              stops: [[11, 5], [14, 8], [22, 180]],
+            },
+            'circle-color': {
+              property: 'cost',
+              default: '#FF7616',
+              stops: [
+                [0.0, 'blue'], 
+                [400, 'green'], 
+                [800, 'yellow'], 
+                [1500, 'orange'], 
+                [13000, 'red'], 
+//                [0.0, '#FFAD27'], // least dense
+//                [500, '#F26401'], // light orange
+//                [1200, '#C33501'], // (our base orange)
+//                [13000, '#900149'], // (most density)
+              ],
+            },
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0,
+            'circle-stroke-color': 'black',
+            'circle-stroke-opacity': 0.5,
+          },
+          source: 'points',
+        })
+
+	map.setCenter([-77.02085958035660371479,  38.88513579808070375066])
+        map.zoomTo(11)
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'points', function (e, i) {
+
+            new mapboxgl.Popup()
+                .setLngLat(e.features[0].geometry.coordinates)
+                .setHTML(e.features[0].properties.description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'points', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'points', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    }
+    map.on('load', onMapLoad)
+
+</script>

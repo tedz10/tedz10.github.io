@@ -1,0 +1,249 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHdhc2NvIiwiYSI6ImNpdTRtdW9sZjBoaDkydHBnY3FiaGI2bDEifQ.9Gf5y4pu-NhN6s_L0vdd9Q'
+    map = new mapboxgl.Map({
+      container: document.getElementById("map"),
+      logoPosition: 'bottom-right',
+      style: 'mapbox://styles/dwasco/cj0n4fxjp003q2rnyu3r18dd1',
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+
+    onMapLoad = () => {
+        isMapLoaded = true
+        map.addSource('points', {
+          type: 'geojson',
+          cluster: false,
+          clusterMaxZoom: 16, // Max zoom to cluster points on
+          clusterRadius: 2.5, // Radius of each cluster when clustering points (defaults to 50)
+          data: {
+            type: 'FeatureCollection',
+            features: [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.09459459781649570687,  42.37973928451540217566]
+    },
+    properties: {
+      description: '<b>Bar name:</b> backbar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.09536668792848956855,  42.34869258773820632769]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Hawthorne<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.07082189999999854990,  42.42725029999999719621]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Mystic Station<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.06087309999999490628,  42.35714709999999882939]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Silvertone<br><br><b> Neighborhood: </b> Downtown <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-72.09495290000000977670,  42.11102113662170154385]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Sturbridge Seafood<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.00399999999999067768,  42.25235999999999592092]
+    },
+    properties: {
+      description: '<b>Bar name:</b> The Townshend<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-69.96958160400389203915,  41.68593597412110085543]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Del Mar Bistro & Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-70.94943411648270625847,  42.46426440775389465898]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Rossetti Restaurant<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.04773774069658998087,  42.33696707595420605230]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Loco Taqueria and Oyster Bar<br><br><b> Neighborhood: </b> SouthBoston <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.06947924742308941859,  42.34669916305070103135]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Wink & Nod<br><br><b> Neighborhood: </b> SouthEnd <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.05864720000001000244,  42.36539839999999657039]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Ward 8<br><br><b> Neighborhood: </b> NorthEnd <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.15751400000000614909,  42.50197599999999908960]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Sichuan Garden II at The Baldwin<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.07974203871400220578,  42.34914115067969930806]
+    },
+    properties: {
+      description: '<b>Bar name:</b> City Bar<br><br><b> Neighborhood: </b> BackBay <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-70.55701700000000187174,  41.45667600000000163618]
+    },
+    properties: {
+      description: '<b>Bar name:</b> 20byNine<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.500000<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-71.63994479999999498432,  42.17907759999999939282]
+    },
+    properties: {
+      description: '<b>Bar name:</b> Red Rock Grill & Bar<br><br><b> Neighborhood: </b>  <br><br><b>Average rating:</b> 4.000000<br><br>'
+    }
+  }],
+          },
+        })
+
+        map.addLayer({
+          id: 'points',
+          type: 'circle',
+          paint: {
+            'circle-blur': 0.1,
+            'circle-radius': {
+              base: 2,
+              stops: [[11, 5], [14, 8], [22, 180]],
+            },
+            'circle-color': {
+              property: 'cost',
+              default: '#FF7616',
+              stops: [
+                [0.0, 'blue'], 
+                [400, 'green'], 
+                [800, 'yellow'], 
+                [1500, 'orange'], 
+                [13000, 'red'], 
+//                [0.0, '#FFAD27'], // least dense
+//                [500, '#F26401'], // light orange
+//                [1200, '#C33501'], // (our base orange)
+//                [13000, '#900149'], // (most density)
+              ],
+            },
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0,
+            'circle-stroke-color': 'black',
+            'circle-stroke-opacity': 0.5,
+          },
+          source: 'points',
+        })
+
+	map.setCenter([-71.09459459781649570687,  42.37973928451540217566])
+        map.zoomTo(10)
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'points', function (e, i) {
+
+            new mapboxgl.Popup()
+                .setLngLat(e.features[0].geometry.coordinates)
+                .setHTML(e.features[0].properties.description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'points', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'points', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    }
+    map.on('load', onMapLoad)
+
+</script>
