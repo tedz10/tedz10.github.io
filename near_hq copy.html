@@ -1,0 +1,645 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHdhc2NvIiwiYSI6ImNpdTRtdW9sZjBoaDkydHBnY3FiaGI2bDEifQ.9Gf5y4pu-NhN6s_L0vdd9Q'
+    map = new mapboxgl.Map({
+      container: document.getElementById("map"),
+      logoPosition: 'bottom-right',
+      style: 'mapbox://styles/dwasco/cj0n4fxjp003q2rnyu3r18dd1',
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+
+    onMapLoad = () => {
+        isMapLoaded = true
+        map.addSource('points', {
+          type: 'geojson',
+          cluster: false,
+          clusterMaxZoom: 16, // Max zoom to cluster points on
+          clusterRadius: 2.5, // Radius of each cluster when clustering points (defaults to 50)
+          data: {
+            type: 'FeatureCollection',
+            features: [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41925000000000522959,  37.75636989999999570955],
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Foreign Cinema<br><br><b>Distance:</b> 0.402831<br><br><b>Type:</b> newamerican, mediterranean, nan<br><br>'
+    }
+  },
+
+    {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.412322,  37.758335]
+    },
+    properties: {
+      description: '<b>Location:</b> HOODLINE HQ<br><br><b>Distance:</b> 0.00<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41659623464198602960,  37.75706660792550195538]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Limón Rotisserie<br><br><b>Distance:</b> 0.249853<br><br><b>Type:</b> latin, peruvian, tapasmallplates<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41924099999998531985,  37.76160600000000044929]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Gracias Madre<br><br><b>Distance:</b> 0.440923<br><br><b>Type:</b> vegan, mexican, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42105931043600719477,  37.75709219276910033614]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> DOSA on Valencia<br><br><b>Distance:</b> 0.486035<br><br><b>Type:</b> indpak, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41951000000000249202,  37.76046999999999798092]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Taqueria Cancún<br><br><b>Distance:</b> 0.420216<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40994262695299710231,  37.75297927856450286299]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> La Palma Mexicatessen<br><br><b>Distance:</b> 0.391674<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41338000000000363343,  37.75275999999999498868]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Basa Seafood Express<br><br><b>Distance:</b> 0.388832<br><br><b>Type:</b> seafood, sandwiches, burgers<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41478629489299123634,  37.75547330410520174837]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Bacon Dog Cart<br><br><b>Distance:</b> 0.239081<br><br><b>Type:</b> hotdog, streetvendors, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41893365979200325455,  37.75664091110229492188]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Lolinda<br><br><b>Distance:</b> 0.380413<br><br><b>Type:</b> steak, argentine, tapasmallplates<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41968999999998857220,  37.76041000000000025238]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Lazy Bear<br><br><b>Distance:</b> 0.428060<br><br><b>Type:</b> newamerican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41063999999998657131,  37.76062000000000296041]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Universal Cafe<br><br><b>Distance:</b> 0.182528<br><br><b>Type:</b> breakfast_brunch, newamerican, diners<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41891689999999925931,  37.75673120000000437813]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> El Techo<br><br><b>Distance:</b> 0.377669<br><br><b>Type:</b> tapas, latin, cocktailbars<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41884045302900574370,  37.75722770604739508826]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Myriad Gastropub<br><br><b>Distance:</b> 0.365000<br><br><b>Type:</b> gastropubs, venues, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42079925537099427402,  37.75667572021479401201]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Udupi Palace<br><br><b>Distance:</b> 0.478077<br><br><b>Type:</b> indpak, vegetarian, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41984558105498592795,  37.76003265380860085543]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Hog & Rocks<br><br><b>Distance:</b> 0.428265<br><br><b>Type:</b> gastropubs, breakfast_brunch, cocktailbars<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40962382002399522207,  37.75567453006160434370]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> El Metate Restaurant<br><br><b>Distance:</b> 0.235572<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41963437844199802385,  37.76133475770529912552]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Commonwealth<br><br><b>Distance:</b> 0.450674<br><br><b>Type:</b> newamerican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41134999999999877218,  37.75254000000000331738]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Tortas Los Picudos<br><br><b>Distance:</b> 0.403193<br><br><b>Type:</b> mexican, juicebars, sandwiches<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42088000000001102308,  37.75630000000000308091]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Aslam\'s Rasoi<br><br><b>Distance:</b> 0.489167<br><br><b>Type:</b> indpak, pakistani, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41455420986000035555,  37.75259185790610416689]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> The Pizza Shop<br><br><b>Distance:</b> 0.414518<br><br><b>Type:</b> pizza, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41112999999999999545,  37.75285000000000223963]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> El Farolito<br><br><b>Distance:</b> 0.383874<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41107490000000268537,  37.76021790000000066811]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Farmhouse Kitchen Thai Cuisine<br><br><b>Distance:</b> 0.146717<br><br><b>Type:</b> thai, comfortfood, gluten_free<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41143973093500108007,  37.75895816461070353398]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Atlas Cafe<br><br><b>Distance:</b> 0.064659<br><br><b>Type:</b> sandwiches, breakfast_brunch, cafes<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41256713867200289769,  37.75239944458009944128]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Taqueria Vallarta<br><br><b>Distance:</b> 0.409578<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41667999999999949523,  37.75865000000000293312]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> San Jalisco<br><br><b>Distance:</b> 0.239609<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42036000000000228738,  37.75834000000000401087]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> 20 Spot<br><br><b>Distance:</b> 0.440122<br><br><b>Type:</b> newamerican, wine_bars, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41694884045099911418,  37.75566688272929383174]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Californios<br><br><b>Distance:</b> 0.313123<br><br><b>Type:</b> mexican, seafood, salad<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41878200000000731507,  37.75951500000000038426]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Arabian Nights Restaurant<br><br><b>Distance:</b> 0.362956<br><br><b>Type:</b> mediterranean, wine_bars, arabian<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41943000000000552063,  37.75947999999999638021]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Little Heaven Deli<br><br><b>Distance:</b> 0.397127<br><br><b>Type:</b> creperies, delis, bubbletea<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41501999999999839019,  37.75872999999999990450]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Schmidt\'s<br><br><b>Distance:</b> 0.150220<br><br><b>Type:</b> german, breakfast_brunch, bars<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41873000000001070475,  37.76042999999999949523]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Little Baobab<br><br><b>Distance:</b> 0.379451<br><br><b>Type:</b> senegalese, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41842599999999663396,  37.75341199999999730608]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> La Corneta Taqueria<br><br><b>Distance:</b> 0.476436<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41481018066400565658,  37.75709915161129259786]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Heirloom Cafe<br><br><b>Distance:</b> 0.160706<br><br><b>Type:</b> cafes, french, italian<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41311999999999216016,  37.75417000000000200544]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> El Gallo Giro Taco Truck<br><br><b>Distance:</b> 0.290552<br><br><b>Type:</b> mexican, foodtrucks, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41894531250000000000,  37.76046371459960226957]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Alba Ray\'s<br><br><b>Distance:</b> 0.391245<br><br><b>Type:</b> cajun, bars, tapasmallplates<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41039999999999565716,  37.75294000000000238515]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> La Espiga De Oro<br><br><b>Distance:</b> 0.386675<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41930983960600087812,  37.76057370007040248083]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Mission Street Oyster Bar & Seafood Restaurant<br><br><b>Distance:</b> 0.412592<br><br><b>Type:</b> seafood, fishnchips, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40925155579999739075,  37.75441972978329374655]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Buttermilk Southern Kitchen<br><br><b>Distance:</b> 0.318089<br><br><b>Type:</b> cajun, southern, soulfood<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41905570123998359122,  37.76009988766010394556]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Cholo Soy<br><br><b>Distance:</b> 0.388272<br><br><b>Type:</b> peruvian, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40858459472700303650,  37.75263214111329546085]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Roosevelt Tamale Parlor<br><br><b>Distance:</b> 0.443367<br><br><b>Type:</b> mexican, breakfast_brunch, tradamerican<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.42090606689501441906,  37.75778961181639914457]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Sorrel<br><br><b>Distance:</b> 0.471526<br><br><b>Type:</b> newamerican, italian, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41610070000000121127,  37.76205360000000155196]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Gallardos Mexican Restaurant<br><br><b>Distance:</b> 0.329514<br><br><b>Type:</b> mexican, breakfast_brunch, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41891999999999995907,  37.75920999999999594365]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> FOB Kitchen<br><br><b>Distance:</b> 0.366278<br><br><b>Type:</b> filipino, breakfast_brunch, popuprestaurants<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41345420000001809058,  37.75243320000000579739]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> El Nuevo Frutilandia<br><br><b>Distance:</b> 0.411725<br><br><b>Type:</b> cuban, puertorican, tapasmallplates<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41470336914100869308,  37.75270080566409802714]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Sun Rise Restaurant<br><br><b>Distance:</b> 0.409870<br><br><b>Type:</b> latin, breakfast_brunch, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40844726562500000000,  37.75263977050779828915]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Kazan<br><br><b>Distance:</b> 0.446425<br><br><b>Type:</b> japanese, sushi, soup<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41899937391299602041,  37.75877058506009831262]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Pete\'s Barbeque<br><br><b>Distance:</b> 0.366852<br><br><b>Type:</b> bbq, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.40871699999999577813,  37.75268300000000465388]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> La Torta Gorda<br><br><b>Distance:</b> 0.436935<br><br><b>Type:</b> mexican, nan, nan<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41876000000000601631,  37.75754000000000587534]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Mateo\'s Taqueria<br><br><b>Distance:</b> 0.356754<br><br><b>Type:</b> mexican, breakfast_brunch, vegetarian<br><br>'
+    }
+  },
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.41653442382799710231,  37.75900268554689631628]
+    },
+    properties: {
+      description: '<b>Restaurant:</b> Mr. Pickle\'s Sandwich Shop<br><br><b>Distance:</b> 0.235203<br><br><b>Type:</b> sandwiches, salad, nan<br><br>'
+    }
+  }],
+          },
+        })
+
+        map.addLayer({
+          id: 'points',
+          type: 'circle',
+          paint: {
+            'circle-blur': 0.1,
+            'circle-radius': {
+              base: 2,
+              stops: [[11, 5], [14, 8], [22, 180]],
+            },
+            'circle-color': {
+              property: 'cost',
+              default: '#FF7616',
+              stops: [
+                [0.0, 'blue'], 
+                [400, 'green'], 
+                [800, 'yellow'], 
+                [1500, 'orange'], 
+                [13000, 'red'], 
+//                [0.0, '#FFAD27'], // least dense
+//                [500, '#F26401'], // light orange
+//                [1200, '#C33501'], // (our base orange)
+//                [13000, '#900149'], // (most density)
+              ],
+            },
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0,
+            'circle-stroke-color': 'black',
+            'circle-stroke-opacity': 0.5,
+          },
+          source: 'points',
+        })
+
+	map.setCenter([-122.4158, 37.7570])
+        map.zoomTo(13.5)
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'points', function (e, i) {
+
+            new mapboxgl.Popup()
+                .setLngLat(e.features[0].geometry.coordinates)
+                .setHTML(e.features[0].properties.description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'points', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'points', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    }
+    map.on('load', onMapLoad)
+
+</script>
